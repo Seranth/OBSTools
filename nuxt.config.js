@@ -3,6 +3,10 @@ const colors = require('vuetify/es5/util/colors').default;
 module.exports = {
   mode: 'universal',
   telemetry: false,
+
+  router: {
+    base: '/OBSTools/'
+  },
   /*
    ** Headers of the page
    */
