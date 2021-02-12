@@ -1,0 +1,18 @@
+<template>
+  <nuxt />
+</template>
+
+<script>
+export default {
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="less">
+body,
+html {
+  overflow: hidden;
+}
+</style>
