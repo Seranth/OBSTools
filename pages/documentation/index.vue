@@ -16,6 +16,18 @@
               <li>Add a new Browser Source</li>
               <li>Use the URL from one of the overlays</li>
               <li>
+                (Conditional) If the overlay specifies dimensions you need to
+                set the same dimensions in OBS for the browser for it to display
+                properly. I'm considering going through the extra effort of not
+                enforcing it but haven't bothered yet. You can still resize the
+                window in OBS, you just have to specify that the window is a
+                certain size that when you then resize in your OBS stream window
+                actually just change the zoom of, that'll let the overlay keep
+                sizing things based on absolute values and you can still change
+                its size. Again, working on a better solution, but I'm a one man
+                army for this project.
+              </li>
+              <li>
                 (Optional) Select "Refresh browser when scene becomes active" in
                 case something doesn't load properly
               </li>
@@ -48,6 +60,10 @@
                         >8BitDo SNES Gamepad</a
                       >
                     </td>
+                  </tr>
+                  <tr>
+                    <td>Dimensions</td>
+                    <td>1000x600</td>
                   </tr>
                   <tr>
                     <td>URL</td>

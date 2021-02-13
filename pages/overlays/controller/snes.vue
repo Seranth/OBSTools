@@ -225,6 +225,7 @@ export default {
   height: 600px;
   background: url('~assets/images/snes-controller.png');
   background-size: contain;
+  background-repeat: no-repeat;
   //background-color: #3b8070;
   position: absolute;
 }
