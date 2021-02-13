@@ -10,7 +10,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+html,
+body {
+  overflow: hidden !important;
+}
 .no-overflow {
   overflow: hidden;
 }
