@@ -1,5 +1,5 @@
 <template>
-  <div class="snes-controller">
+  <div id="overlay" class="snes-controller">
     <div
       v-show="key.w"
       class="io-icon"
@@ -216,6 +216,9 @@ export default {
 </script>
 
 <style lang="less">
+#overlay {
+  max-width: 100%;
+}
 .snes-controller {
   display: block;
   width: 1000px;

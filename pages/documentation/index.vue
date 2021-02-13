@@ -32,7 +32,7 @@
               This version of the overlay works by using the Gamepad API in the
               browser to light up whichever buttons are being pressed.
             </p>
-            <v-simple-table class="ma-5">
+            <v-simple-table class="pa-5">
               <template #default>
                 <tbody>
                   <tr>
@@ -63,6 +63,27 @@
               </template>
             </v-simple-table>
 
+            <v-expansion-panels class="pa-5">
+              <v-expansion-panel class="elevation-2">
+                <v-expansion-panel-header> Preview </v-expansion-panel-header>
+                <v-expansion-panel-content>
+                  <iframe
+                    frameborder="0"
+                    scrolling="no"
+                    class="my-iframe"
+                    src="https://seranth.github.io/OBSTools/overlays/controller/snes"
+                    sandbox="allow-same-origin allow-scripts"
+                    onload="this.style.height=(this.contentWindow.document.getElementById('overlay').scrollHeight)+'px';"
+                  />
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-expansion-panels>
+
+            <v-alert border="left" color="indigo" dark>
+              If it doesn't respond to your button mashing, try reconnecting
+              your controller
+            </v-alert>
+
             <v-alert border="left" color="indigo" dark>
               If the wrong buttons light up your controller may be different
               from mine. Contact me on Discord and maybe I'll create a new one
@@ -79,3 +100,9 @@
     </v-row>
   </v-container>
 </template>
+
+<style scoped>
+.my-iframe {
+  width: 100%;
+}
+</style>
