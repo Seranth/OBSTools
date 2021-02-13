@@ -11,7 +11,7 @@
     </tr>
     <tr>
       <td rowspan="3" colspan="2">
-        <div style="display:block;width:3cm;"></div>
+        <div style="display: block; width: 3cm"></div>
       </td>
       <td><img :src="iconVaria" :class="{ active: items.varia }" /></td>
       <td><img :src="iconGravity" :class="{ active: items.gravity }" /></td>
@@ -79,17 +79,17 @@ export default {
         screw: false,
         hijump: false,
         space: false,
-        speed: false
-      }
+        speed: false,
+      },
     };
   },
   mounted() {
     const self = this;
     const socket = io('http://localhost:3000');
-    socket.on('metroid update', function(event) {
+    socket.on('metroid update', function (event) {
       self.items = event;
     });
-  }
+  },
 };
 </script>
 

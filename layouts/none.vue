@@ -1,18 +1,17 @@
 <template>
-  <nuxt />
+  <nuxt class="no-overflow" />
 </template>
 
 <script>
 export default {
   data() {
     return {};
-  }
+  },
 };
 </script>
 
-<style lang="less">
-body,
-html {
+<style scoped>
+.no-overflow {
   overflow: hidden;
 }
 </style>

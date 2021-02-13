@@ -11,19 +11,19 @@ export default {
   layout: 'none',
   data() {
     return {
-      title: ''
+      title: '',
     };
   },
   mounted() {
     const self = this;
     const socket = io('http://localhost:3000');
-    socket.on('keydown', function(event) {
+    socket.on('keydown', function (event) {
       self.title = event;
     });
-    socket.on('keyup', function(event) {
+    socket.on('keyup', function (event) {
       self.title = event;
     });
-  }
+  },
 };
 </script>
 

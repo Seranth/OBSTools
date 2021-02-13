@@ -3,62 +3,112 @@
     <div
       v-show="key.w"
       class="io-icon"
-      style="top:224px;left: 222px;height:51px;width:51px;"
+      style="top: 224px; left: 222px; height: 51px; width: 51px"
     ></div>
     <div
       v-show="key.a"
       class="io-icon"
-      style="top:274px;left: 172px;height:51px;width:51px;"
+      style="top: 274px; left: 172px; height: 51px; width: 51px"
     ></div>
     <div
       v-show="key.s"
       class="io-icon"
-      style="top:325px;left: 222px;height:51px;width:51px;"
+      style="top: 325px; left: 222px; height: 51px; width: 51px"
     ></div>
     <div
       v-show="key.d"
       class="io-icon"
-      style="top:274px;left: 272px;height:51px;width:51px;"
+      style="top: 274px; left: 272px; height: 51px; width: 51px"
     ></div>
     <div
       v-show="key.up"
       class="io-icon"
-      style="top:199px;left: 712px;height:58px;width:58px;border-radius: 100%;"
+      style="
+        top: 199px;
+        left: 712px;
+        height: 58px;
+        width: 58px;
+        border-radius: 100%;
+      "
     ></div>
     <div
       v-show="key.left"
       class="io-icon"
-      style="top:266px;left: 644px;height:58px;width:58px;border-radius: 100%;"
+      style="
+        top: 266px;
+        left: 644px;
+        height: 58px;
+        width: 58px;
+        border-radius: 100%;
+      "
     ></div>
     <div
       v-show="key.right"
       class="io-icon"
-      style="top:274px;left: 793px;height:58px;width:58px;border-radius: 100%;"
+      style="
+        top: 274px;
+        left: 793px;
+        height: 58px;
+        width: 58px;
+        border-radius: 100%;
+      "
     ></div>
     <div
       v-show="key.down"
       class="io-icon"
-      style="top:342px;left: 725px;height:58px;width:58px;border-radius: 100%;"
+      style="
+        top: 342px;
+        left: 725px;
+        height: 58px;
+        width: 58px;
+        border-radius: 100%;
+      "
     ></div>
     <div
       v-show="key.e"
       class="io-icon"
-      style="top:110px;left: 235px;height:23px;width:113px;border-radius: 0 23px 23px 0"
+      style="
+        top: 110px;
+        left: 235px;
+        height: 23px;
+        width: 113px;
+        border-radius: 0 23px 23px 0;
+      "
     ></div>
     <div
       v-show="key.lctrl"
       class="io-icon"
-      style="top:110px;left: 653px;height:23px;width:113px;border-radius: 23px 0 0 23px"
+      style="
+        top: 110px;
+        left: 653px;
+        height: 23px;
+        width: 113px;
+        border-radius: 23px 0 0 23px;
+      "
     ></div>
     <div
       v-show="key.q"
       class="io-icon"
-      style="top:321px;left: 404px;height:18px;width:70px;border-radius: 23px 23px 23px 23px;transform: rotate(135deg)"
+      style="
+        top: 321px;
+        left: 404px;
+        height: 18px;
+        width: 70px;
+        border-radius: 23px 23px 23px 23px;
+        transform: rotate(135deg);
+      "
     ></div>
     <div
       v-show="key.lshift"
       class="io-icon"
-      style="top:321px;left: 499px;height:18px;width:70px;border-radius: 23px 23px 23px 23px;transform: rotate(135deg)"
+      style="
+        top: 321px;
+        left: 499px;
+        height: 18px;
+        width: 70px;
+        border-radius: 23px 23px 23px 23px;
+        transform: rotate(135deg);
+      "
     ></div>
   </div>
 </template>
@@ -81,14 +131,14 @@ export default {
         e: false,
         lctrl: false,
         q: false,
-        lshift: false
-      }
+        lshift: false,
+      },
     };
   },
   mounted() {
     const self = this;
     const socket = io('http://localhost:3000');
-    socket.on('keydown', function(event) {
+    socket.on('keydown', function (event) {
       console.log('Key pressed:');
       console.log(event.rawcode);
       if (event.rawcode === 38) {
@@ -128,7 +178,7 @@ export default {
         self.key.lshift = true;
       }
     });
-    socket.on('keyup', function(event) {
+    socket.on('keyup', function (event) {
       if (event.rawcode === 38) {
         self.key.up = false;
       }
@@ -166,7 +216,7 @@ export default {
         self.key.lshift = false;
       }
     });
-  }
+  },
 };
 </script>
 
