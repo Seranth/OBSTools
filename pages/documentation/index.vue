@@ -113,6 +113,92 @@
           </v-card-text>
         </v-card>
       </v-col>
+      <v-col cols="12">
+        <v-card>
+          <v-card-title class="headline"> Countdown </v-card-title>
+          <v-card-text>
+            <p>
+              Displays a simple countdown. By default it's white. I could add
+              support for more fonts but I had no reason to do so yet, request
+              it if you want it.
+            </p>
+            <p>
+              As a tip, if you set this overlay to clear cache whenever its
+              scene gets activated you can easily set this to be e.g. a default
+              5 minutes for your "BRB" screen, so that every time you go to your
+              "BRB" screen it will always do a 5 minute countdown.
+            </p>
+            <v-simple-table class="pa-5">
+              <template #default>
+                <tbody>
+                  <tr>
+                    <td>Requires connector</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>URL</td>
+                    <td>
+                      <a
+                        href="https://seranth.github.io/OBSTools/overlays/countdown"
+                        target="_blank"
+                        >https://seranth.github.io/OBSTools/overlays/countdown</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Parameters</td>
+                    <td>
+                      <ul>
+                        <li>
+                          <b>for=DD:HH:MM:SS</b> - How long the countdown should
+                          last. Supports days, hours, minutes and seconds.
+                        </li>
+                        <li><b>black</b> - Makes the text black.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Example 5 min countdown</td>
+                    <td>
+                      <a
+                        href="https://seranth.github.io/OBSTools/overlays/countdown?for=5:00"
+                        target="_blank"
+                        >https://seranth.github.io/OBSTools/overlays/countdown?for=5:00</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Example with black text</td>
+                    <td>
+                      <a
+                        href="https://seranth.github.io/OBSTools/overlays/countdown?for=2:35&black"
+                        target="_blank"
+                        >https://seranth.github.io/OBSTools/overlays/countdown?for=2:35&black</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+
+            <v-expansion-panels class="pa-5">
+              <v-expansion-panel class="elevation-2">
+                <v-expansion-panel-header> Preview </v-expansion-panel-header>
+                <v-expansion-panel-content>
+                  <iframe
+                    frameborder="0"
+                    scrolling="no"
+                    class="my-iframe"
+                    src="https://seranth.github.io/OBSTools/overlays/countdown?for=6:6:6"
+                    sandbox="allow-same-origin allow-scripts"
+                    onload="this.style.height=(this.contentWindow.document.getElementById('overlay').scrollHeight)+'px';"
+                  />
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-expansion-panels>
+          </v-card-text>
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>
