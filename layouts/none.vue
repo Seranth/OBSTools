@@ -7,15 +7,22 @@ export default {
   data() {
     return {};
   },
+
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'no-overflow',
+      },
+      htmlAttrs: {
+        class: 'no-overflow',
+      },
+    };
+  },
 };
 </script>
 
 <style>
-html,
-body {
-  overflow: hidden !important;
-}
 .no-overflow {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 </style>
