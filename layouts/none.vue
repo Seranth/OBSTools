@@ -20,9 +20,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.no-overflow {
-  overflow: hidden !important;
-}
-</style>

@@ -135,6 +135,17 @@ export default {
       },
     };
   },
+
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'no-overflow',
+      },
+      htmlAttrs: {
+        class: 'no-overflow',
+      },
+    };
+  },
   mounted() {
     const self = this;
     const socket = io('http://localhost:3000');

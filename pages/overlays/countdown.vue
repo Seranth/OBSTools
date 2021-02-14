@@ -25,6 +25,17 @@ export default {
       },
     };
   },
+
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'no-overflow',
+      },
+      htmlAttrs: {
+        class: 'no-overflow',
+      },
+    };
+  },
   mounted() {
     const self = this;
     console.log(self.$route.query);
